@@ -1,0 +1,107 @@
+<div><div class="container p-3 mx-auto w-50 form-box my-5 rounded-md">
+    <h2 style="color: #181642" class="text-center mb-3">Fill the details to generate Token</h2>
+    <form action="/addVaf" method="post">
+      <div class="input-group mb-3">
+        <select
+          required
+          name="ecutype"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected disabled>select ECU</option>
+          <option value="EPM44">EPM44</option>
+          <option value="EPM44-EVO">EPM44</option>
+          <option value="Next-Gen">Next-Gen</option>
+        </select>
+      </div>
+  
+      <div class="input-group mb-3">
+        <select
+          required
+          name="OEM"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected disabled>select OEM name</option>
+          <option value="TVS">TVS</option>
+          <option value="HERO">HERO</option>
+          <option value="BAJAJ">BAJAJ</option>
+          <option value="REML">REML</option>
+          <option value="KTM">KTM</option>
+          <option value="POLARIS">POLARIS</option>
+        </select>
+      </div>
+  
+      <div class="mb-3">
+        <label for="basic-url" class="form-label">ECU Serial number</label>
+        <div class="input-group">
+          <input
+            required
+            name="ecuserialnumber"
+            type="text"
+            class="form-control"
+            id="basic-url"
+            aria-describedby="basic-addon3 basic-addon4"
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="basic-url" class="form-label">ECU part number</label>
+        <div class="input-group">
+          <input
+            required
+            name="ecupartnumber"
+            type="text"
+            class="form-control"
+            id="basic-url"
+            aria-describedby="basic-addon3 basic-addon4"
+          />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="basic-url" class="form-label">VIN number</label>
+        <div class="input-group">
+          <input
+            required
+            name="vinnumber"
+            type="text"
+            class="form-control"
+            id="basic-url"
+            aria-describedby="basic-addon3 basic-addon4"
+          />
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <select
+          required
+          name="OEM"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected disabled>select VAF feature</option>
+          <option value="Sensorless QS">Sensorless QS</option>
+          <option value="Traction control">Traction control</option>
+          <option value="TPMS">TPMS</option>
+          <option value="Sensorless Knock">Sensorless Knock</option>
+        </select>
+      </div>
+  
+      <div class="input-group mb-3">
+        <span class="input-group-text">Enabler email</span>
+        <input
+          required
+          name="companyname"
+          type="text"
+          class="form-control"
+          value = <%= userEmail %>
+          aria-label="Amount (to the nearest dollar)"
+        />
+      </div>
+      <button class="w-100 mb-3 mt-2 btn btn-md btn-success" type="submit">
+        Submit
+      </button>
+    </form>
+  </div>
+  </div>
